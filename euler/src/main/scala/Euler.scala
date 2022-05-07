@@ -8,6 +8,7 @@ private object ListToOption {
 
 private object Prime {
   def isPrime(n: Int): Boolean = {
+    @annotation.tailrec
     def go(current: Int): Boolean =
       if (current <= 1) true
       else if (n != current && n % current == 0) false
